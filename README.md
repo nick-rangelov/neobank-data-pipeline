@@ -7,7 +7,10 @@ An end-to-end ELT pipeline built on AWS using **synthetic** neobank data (custom
 ## Architecture
 
 ```
-Raw CSV files  ->  Amazon S3 (data lake)  ->  Amazon Redshift Serverless (warehouse)  ->  dbt (transformations)
+Raw CSV files
+   -> Amazon S3 (data lake)
+   -> Amazon Redshift Serverless (warehouse)
+   -> dbt (transformations)
 ```
 
 | Layer | Tool | Purpose |
