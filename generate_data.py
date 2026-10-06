@@ -49,7 +49,7 @@ for cust_id in range(1, N_CUSTOMERS + 1):
     })
 
 with open(f"{OUT_DIR}/customers.csv", "w", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=list(customers[0].keys()))
+    writer = csv.DictWriter(f, fieldnames=list(customers[0].keys()), lineterminator="\n")
     writer.writeheader()
     writer.writerows(customers)
 
@@ -76,7 +76,7 @@ for cust in customers:
         account_id += 1
 
 with open(f"{OUT_DIR}/accounts.csv", "w", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=list(accounts[0].keys()))
+    writer = csv.DictWriter(f, fieldnames=list(accounts[0].keys()), lineterminator="\n")
     writer.writeheader()
     writer.writerows(accounts)
 
@@ -117,7 +117,7 @@ for acct in accounts:
         txn_id += 1
 
 with open(f"{OUT_DIR}/transactions.csv", "w", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=list(transactions[0].keys()))
+    writer = csv.DictWriter(f, fieldnames=list(transactions[0].keys()), lineterminator="\n")
     writer.writeheader()
     writer.writerows(transactions)
 
