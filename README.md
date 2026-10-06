@@ -56,3 +56,9 @@ This creates three CSV files in a local `data/` folder.
 ## What I learned
 
 _To be completed at the end of the project._
+
+## Design notes
+
+- **Regions:** the S3 data lake is in `eu-central-1` and Redshift Serverless is in `us-east-1`. `COPY` uses the `REGION` option to load across regions. With real EU customer data I would keep both in one EU region for data residency and to avoid cross-region transfer costs.
+- **Schema name:** the raw schema is called `raw_data` because `raw` is a reserved word in Redshift.
+- **Currencies:** transactions are in EUR, USD and GBP, so aggregates group by currency instead of summing amounts across currencies.
