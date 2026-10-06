@@ -30,9 +30,9 @@ Generated with `generate_data.py` (fixed random seed, so output is reproducible)
 ## Project status
 
 - [x] Synthetic data generator
-- [ ] S3 bucket and raw file upload
-- [ ] Redshift Serverless setup
-- [ ] Raw tables loaded with `COPY`
+- [x] S3 bucket and raw file upload
+- [x] Redshift Serverless setup
+- [x] Raw tables loaded with `COPY`
 - [ ] dbt project: staging models
 - [ ] dbt project: mart model (monthly transaction summary per customer segment)
 - [ ] dbt tests (unique, not_null, relationships)
