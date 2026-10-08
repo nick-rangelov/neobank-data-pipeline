@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: Raw tables loaded from S3 with COPY
+    schema: raw_data
+    tables:
+      - name: customers
+      - name: accounts
+      - name: transactions
