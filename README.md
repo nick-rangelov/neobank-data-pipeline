@@ -36,7 +36,7 @@ Generated with `generate_data.py` (fixed random seed, so output is reproducible)
 - [x] dbt project: staging models
 - [x] dbt project: mart model (monthly transaction summary per customer segment)
 - [x] dbt tests (unique, not_null, relationships)
-- [ ] Architecture diagram and sample output
+- [x] Architecture diagram and sample output
 
 ## How to reproduce
 
@@ -96,3 +96,7 @@ The connection profile lives in `~/.dbt/profiles.yml` (outside the repo), with h
 | 2025-10-01 | retail | USD | 66 | 16 | 31883.49 | -8948.97 |
 
 Amounts are grouped by currency on purpose; summing EUR, USD and GBP together would be meaningless.
+
+## Lineage
+
+![dbt lineage graph](docs/lineage.jpg)
